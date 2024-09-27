@@ -27,17 +27,27 @@
 
 /* Slicing */
 
-myName = "Devesh";
-document.write(myName.slice(0,1));  // It has extracted the string starting from index 0 to index 1(excluding index 1)
+// myName = "Devesh";
+// document.write(myName.slice(0,1));  // It has extracted the string starting from index 0 to index 1(excluding index 1)
 
-document.write(myName.slice(5,6));
-document.write(myName.slice(myName.length-1, myName.length));  //same as above
+// document.write(myName.slice(5,6));
+// document.write(myName.slice(myName.length-1, myName.length));  //same as above
 
-document.write(myName.slice(0,3));
+// document.write(myName.slice(0,3));
 
-document.write(myName.slice(1,5));
+// document.write(myName.slice(1,5));
 
-var maxLimit = 140;
-var userInput = prompt("Enter anything here : ");
-var userInputLimit140 = userInput.slice(0, maxLimit); //we are cutting down the string to max 140 chars only
-alert(userInputLimit140);  
+// var maxLimit = 140;
+// var userInput = prompt("Enter anything here : ");
+// var userInputLimit140 = userInput.slice(0, maxLimit); //we are cutting down the string to max 140 chars only
+// alert(userInputLimit140);  
+
+
+/* String Case Change : Uppercase and lowercase */
+
+var myName = "Devesh";
+document.write(myName.toUpperCase());
+document.write(myName.toLowerCase());
+
+var myName2 = prompt("What is your name ? : ");
+alert("Hello, " + (myName2.slice(0,1)).toUpperCase() + (myName2.slice(1, myName2.length)).toLowerCase());
