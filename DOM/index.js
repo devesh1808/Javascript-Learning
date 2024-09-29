@@ -75,12 +75,23 @@
 
 /* Manipulating and Changing Styles of HTML elements with js */
 
-document.querySelector("h1").style.color = "red";
+// document.querySelector("h1").style.color = "red";
 
-document.querySelector("h1").style.fontSize = "5rem";
+// document.querySelector("h1").style.fontSize = "5rem";
 
-document.querySelector("h1").style.visibility = "hidden";
+// document.querySelector("h1").style.visibility = "hidden";
 
-document.querySelector(".btn").style.backgroundColor = "yellow";
+// document.querySelector(".btn").style.backgroundColor = "yellow";
 
-document.querySelector("button").style.backgroundColor = "lime";  // same as above
+// document.querySelector("button").style.backgroundColor = "lime";  // same as above
+
+
+
+
+/* innerHTML vs textContent */
+
+document.write(document.querySelector("h1").textContent);
+
+document.querySelector("h1").textContent = "Changed the text using textContent";
+
+document.querySelector("h1").innerHTML = "<em>Changed the text using innerHTML</em>";
