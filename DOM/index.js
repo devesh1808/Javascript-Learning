@@ -11,3 +11,13 @@ heading.style.color = "blue";
 // Targetting the checkbox in HTML using DOM
 
 document.querySelector("input").click();
+
+
+
+/* DOM challange - Changing the text of 3rd list item */
+
+document.querySelector("ul").lastElementChild.innerHTML = "Devesh has changed it";
+
+// OR
+
+document.firstElementChild.lastElementChild.querySelector("ul").lastElementChild.innerHTML = "Devesh has changed it again";
