@@ -90,8 +90,22 @@
 
 /* innerHTML vs textContent */
 
-document.write(document.querySelector("h1").textContent);
+// document.write(document.querySelector("h1").textContent);
 
-document.querySelector("h1").textContent = "Changed the text using textContent";
+// document.querySelector("h1").textContent = "Changed the text using textContent";
 
-document.querySelector("h1").innerHTML = "<em>Changed the text using innerHTML</em>";
+// document.querySelector("h1").innerHTML = "<em>Changed the text using innerHTML</em>";
+
+
+
+
+
+/* Manipulating HTML element attributes */
+
+document.querySelector("a");
+
+document.querySelector("a").attributes;  // to check all the attributes associated to "a"
+
+document.write(document.querySelector("a").getAttribute("href"));  // will give the value of href
+
+document.querySelector("a").setAttribute("href", "https://www.bing.com");  // will set the value of href
