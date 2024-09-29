@@ -31,39 +31,56 @@
 
 //2. getElementsByTagName()
 
-document.getElementsByTagName("li")[2].style.color = "lime";
+//document.getElementsByTagName("li")[2].style.color = "lime";
 
 // 3. getElementsByClassName()
 
-document.getElementsByClassName("btn")[0].style.color = "blue";
+//document.getElementsByClassName("btn")[0].style.color = "blue";
 
 // 4. getElementById()
 
-document.getElementById("title").style.color = "purple";
+// document.getElementById("title").style.color = "purple";
 
-document.getElementById("list").style.color = "red";
+// document.getElementById("list").style.color = "red";
 
-document.getElementById("title").innerHTML = "Time to Say GoodBye";
+// document.getElementById("title").innerHTML = "Time to Say GoodBye";
 
 
 // Note : you can fetch an element from querySelector() by mentioning the element name, class name or id name
 
-document.querySelector("h1").innerHTML = "Changed title 1";
+// document.querySelector("h1").innerHTML = "Changed title 1";
 
-document.querySelector("#title").innerHTML = "Changed title 2";
+// document.querySelector("#title").innerHTML = "Changed title 2";
 
-document.querySelector(".btn").style.color = "orange";
+// document.querySelector(".btn").style.color = "orange";
 
 
 // Combining elements or combining selectors in querySelector()
 
-document.querySelector("li a").style.color = "green";
+// document.querySelector("li a").style.color = "green";
 
-document.querySelector("li.item").style.color = "red";  // will target the first list item
+// document.querySelector("li.item").style.color = "red";  // will target the first list item
 
-document.querySelector("#list a").style.color = "orange";
+// document.querySelector("#list a").style.color = "orange";
 
 
 // Selecting all matching selectors using querySelectorAll()
 
-document.querySelectorAll("#list .item").style.color = "red";
+//document.querySelectorAll("#list .item").style.color = "red";
+
+
+
+
+
+
+/* Manipulating and Changing Styles of HTML elements with js */
+
+document.querySelector("h1").style.color = "red";
+
+document.querySelector("h1").style.fontSize = "5rem";
+
+document.querySelector("h1").style.visibility = "hidden";
+
+document.querySelector(".btn").style.backgroundColor = "yellow";
+
+document.querySelector("button").style.backgroundColor = "lime";  // same as above
