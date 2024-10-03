@@ -17,7 +17,7 @@
 
 // adding event listener to all buttons
 
-var numberOfDrumButtons = document.querySelectorAll(".drum").length
+var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for(var i=0; i<numberOfDrumButtons; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function (){
@@ -25,3 +25,25 @@ for(var i=0; i<numberOfDrumButtons; i++){
     });
 }
 
+
+
+
+// Higher Order Function (HOF) and passing functions as argument
+
+// HOF are functions that can take other functions as inputs
+
+function add(num1, num2){
+    return num1+num2;
+}
+
+function multiply(num1, num2){
+    return num1*num2;
+}
+
+function calculator(num1, num2, operator){
+    return operator(num1, num2);
+}
+
+console.log(calculator(2,6,add));
+
+console.log(calculator(2,6,multiply));
