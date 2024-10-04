@@ -1,19 +1,14 @@
-
 // document.querySelector("button").addEventListener("click", handleClick);
 
 // function handleClick(){
 //     alert("I got clicked");
 // }
 
-
-
 /* created event listener using anonymous function */
 
 // document.querySelector("button").addEventListener("click", function (){
 //     alert("I got clicked");
 // });
-
-
 
 /* adding event listener to all buttons */
 
@@ -24,9 +19,6 @@
 //         alert("I got clicked");
 //     });
 // }
-
-
-
 
 /* Higher Order Function (HOF) and passing functions as argument */
 
@@ -48,21 +40,49 @@
 
 // console.log(calculator(2,6,multiply));
 
-
-
-
-
 /* Playing Sound(Audio) in Js */
 
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-for(var i=0; i<numberOfDrumButtons; i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click", function (){
-        this.style.color = "white";
-    });
+for (var i = 0; i < numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    
+    // using Switch statement for playing sound for differnt buttons
+    var key = this.innerHTML;
+    switch (key) {
+      case "w":
+        var audio1 = new Audio("sounds/tom-1.mp3");
+        audio1.play();
+        break;
+      case "a":
+        var audio2 = new Audio("sounds/tom-2.mp3");
+        audio2.play();
+        break;
+      case "s":
+        var audio3 = new Audio("sounds/tom-3.mp3");
+        audio3.play();
+        break;
+      case "d":
+        var audio4 = new Audio("sounds/tom-4.mp3");
+        audio4.play();
+        break;
+      case "j":
+        var audio5 = new Audio("sounds/snare.mp3");
+        audio5.play();
+        break;
+      case "k":
+        var audio6 = new Audio("sounds/crash.mp3");
+        audio6.play();
+        break;
+      case "l":
+        var audio7 = new Audio("sounds/kick-bass.mp3");
+        audio7.play();
+        break;
+      default:
+        console.log(key);
+    }
+  });
 }
-
-
 
 // var audio = new Audio("sounds/tom-1.mp3");
 // audio.play();
