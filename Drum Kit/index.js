@@ -118,20 +118,43 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 every time and assigning values to them again and again would be time consuming, so better solution 
 is to use Constructor Function in this case */
 
+// function BellBoy (myName, age, hasWorkPermit, languages){
+//     this.myName = myName;
+//     this.age = age;
+//     this.hasWorkPermit = hasWorkPermit;
+//     this.languages = languages;
+// }
+
+// var bellBoy1 = new BellBoy("Jimmy", 24, true, ["English", "French"]);
+
+// var bellBoy2 = new BellBoy("Jordan", 23, false, ["German, French"]);
+
+// var bellBoy3 = new BellBoy("Robert", 29, true, ["African, Hindi"]);
+
+
+// console.log(bellBoy3.languages);
+// console.log(bellBoy2.hasWorkPermit);
+// console.log(bellBoy1.myName);
+
+
+
+
+
+/* Adding a method(function) in a constructor function and using it with objects */
+
 function BellBoy (myName, age, hasWorkPermit, languages){
     this.myName = myName;
     this.age = age;
     this.hasWorkPermit = hasWorkPermit;
     this.languages = languages;
+    this.moveSuitcase = function() {
+        alert("May I move your suitcase ? ");
+    }
 }
 
-var bellBoy1 = new BellBoy("Jimmy", 24, true, ["English", "French"]);
 
+var bellBoy1 = new BellBoy("Jimmy", 24, true, ["English", "French"]);
 var bellBoy2 = new BellBoy("Jordan", 23, false, ["German, French"]);
 
-var bellBoy3 = new BellBoy("Robert", 29, true, ["African, Hindi"]);
-
-
-console.log(bellBoy3.languages);
-console.log(bellBoy2.hasWorkPermit);
-console.log(bellBoy1.myName);
+console.log(bellBoy1.moveSuitcase());
+console.log(bellBoy2.moveSuitcase());
