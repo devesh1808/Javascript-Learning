@@ -42,55 +42,18 @@
 
 /* Playing Sound(Audio) in Js */
 
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+// var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-for (var i = 0; i < numberOfDrumButtons; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-    
-    // using Switch statement for playing sound for differnt buttons
-    var key = this.innerHTML;
-    switch (key) {
-      case "w":
-        var audio1 = new Audio("sounds/tom-1.mp3");
-        audio1.play();
-        break;
-      case "a":
-        var audio2 = new Audio("sounds/tom-2.mp3");
-        audio2.play();
-        break;
-      case "s":
-        var audio3 = new Audio("sounds/tom-3.mp3");
-        audio3.play();
-        break;
-      case "d":
-        var audio4 = new Audio("sounds/tom-4.mp3");
-        audio4.play();
-        break;
-      case "j":
-        var audio5 = new Audio("sounds/snare.mp3");
-        audio5.play();
-        break;
-      case "k":
-        var audio6 = new Audio("sounds/crash.mp3");
-        audio6.play();
-        break;
-      case "l":
-        var audio7 = new Audio("sounds/kick-bass.mp3");
-        audio7.play();
-        break;
-      default:
-        console.log(key);
-    }
-  });
-}
+// for (var i = 0; i < numberOfDrumButtons; i++) {
+//   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+//     // using Switch statement for playing sound for differnt buttons
+//     var key = this.innerHTML;
+//     makeSound(key);
+//   });
+// }
 
 // var audio = new Audio("sounds/tom-1.mp3");
 // audio.play();
-
-
-
-
-
 
 /* Js Objects */
 
@@ -108,9 +71,6 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 // console.log(bellBoy1.hasWorkPermit);
 // console.log(bellBoy1.languages);
 // console.log(bellBoy1.languages[1]);
-
-
-
 
 // Constructor Function
 
@@ -131,30 +91,87 @@ is to use Constructor Function in this case */
 
 // var bellBoy3 = new BellBoy("Robert", 29, true, ["African, Hindi"]);
 
-
 // console.log(bellBoy3.languages);
 // console.log(bellBoy2.hasWorkPermit);
 // console.log(bellBoy1.myName);
 
-
-
-
-
 /* Adding a method(function) in a constructor function and using it with objects */
 
-function BellBoy (myName, age, hasWorkPermit, languages){
-    this.myName = myName;
-    this.age = age;
-    this.hasWorkPermit = hasWorkPermit;
-    this.languages = languages;
-    this.moveSuitcase = function() {
-        alert("May I move your suitcase ? ");
-    }
+// function BellBoy (myName, age, hasWorkPermit, languages){
+//     this.myName = myName;
+//     this.age = age;
+//     this.hasWorkPermit = hasWorkPermit;
+//     this.languages = languages;
+//     this.moveSuitcase = function() {
+//         alert("May I move your suitcase ? ");
+//     }
+// }
+
+// var bellBoy1 = new BellBoy("Jimmy", 24, true, ["English", "French"]);
+// var bellBoy2 = new BellBoy("Jordan", 23, false, ["German, French"]);
+
+// console.log(bellBoy1.moveSuitcase());
+// console.log(bellBoy2.moveSuitcase());
+
+
+
+
+
+
+/* Using Keyboard Event Listeners to Check for Key Presses */
+
+
+
+// Event Listener for Button Press
+var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
+for (var i = 0; i < numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    var key = this.innerHTML;
+    makeSound(key);
+  });
 }
 
 
-var bellBoy1 = new BellBoy("Jimmy", 24, true, ["English", "French"]);
-var bellBoy2 = new BellBoy("Jordan", 23, false, ["German, French"]);
 
-console.log(bellBoy1.moveSuitcase());
-console.log(bellBoy2.moveSuitcase());
+// Event Listener for Key Press
+document.addEventListener("keypress", function (event) {
+  //console.log(event);
+  makeSound(event.key);
+});
+
+
+function makeSound(key) {
+  switch (key) {
+    case "w":
+      var audio1 = new Audio("sounds/tom-1.mp3");
+      audio1.play();
+      break;
+    case "a":
+      var audio2 = new Audio("sounds/tom-2.mp3");
+      audio2.play();
+      break;
+    case "s":
+      var audio3 = new Audio("sounds/tom-3.mp3");
+      audio3.play();
+      break;
+    case "d":
+      var audio4 = new Audio("sounds/tom-4.mp3");
+      audio4.play();
+      break;
+    case "j":
+      var audio5 = new Audio("sounds/snare.mp3");
+      audio5.play();
+      break;
+    case "k":
+      var audio6 = new Audio("sounds/crash.mp3");
+      audio6.play();
+      break;
+    case "l":
+      var audio7 = new Audio("sounds/kick-bass.mp3");
+      audio7.play();
+      break;
+    default:
+      console.log(key);
+  }
+}
