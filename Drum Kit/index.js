@@ -94,17 +94,44 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
 /* Js Objects */
 
-var bellBoy1 = {
-    myName : "Jimmy",
-    age : 25,
-    hasWorkPermit : true,
-    languages : ["English", "French"]
+// var bellBoy1 = {
+//     myName : "Jimmy",
+//     age : 25,
+//     hasWorkPermit : true,
+//     languages : ["English", "French"]
+// }
+
+// // Here, bellBoy1 is object, and myName, age, etc are it's properties
+
+// console.log(bellBoy1);
+// console.log(bellBoy1.myName);
+// console.log(bellBoy1.hasWorkPermit);
+// console.log(bellBoy1.languages);
+// console.log(bellBoy1.languages[1]);
+
+
+
+
+// Constructor Function
+
+/* Let's say, not 1 object, if you want to create 'n' objects with similar properties, then creating a new object 
+every time and assigning values to them again and again would be time consuming, so better solution 
+is to use Constructor Function in this case */
+
+function BellBoy (myName, age, hasWorkPermit, languages){
+    this.myName = myName;
+    this.age = age;
+    this.hasWorkPermit = hasWorkPermit;
+    this.languages = languages;
 }
 
-// Here, bellBoy1 is object, and myName, age, etc are it's properties
+var bellBoy1 = new BellBoy("Jimmy", 24, true, ["English", "French"]);
 
-console.log(bellBoy1);
+var bellBoy2 = new BellBoy("Jordan", 23, false, ["German, French"]);
+
+var bellBoy3 = new BellBoy("Robert", 29, true, ["African, Hindi"]);
+
+
+console.log(bellBoy3.languages);
+console.log(bellBoy2.hasWorkPermit);
 console.log(bellBoy1.myName);
-console.log(bellBoy1.hasWorkPermit);
-console.log(bellBoy1.languages);
-console.log(bellBoy1.languages[1]);
