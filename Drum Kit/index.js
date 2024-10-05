@@ -86,3 +86,25 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
 // var audio = new Audio("sounds/tom-1.mp3");
 // audio.play();
+
+
+
+
+
+
+/* Js Objects */
+
+var bellBoy1 = {
+    myName : "Jimmy",
+    age : 25,
+    hasWorkPermit : true,
+    languages : ["English", "French"]
+}
+
+// Here, bellBoy1 is object, and myName, age, etc are it's properties
+
+console.log(bellBoy1);
+console.log(bellBoy1.myName);
+console.log(bellBoy1.hasWorkPermit);
+console.log(bellBoy1.languages);
+console.log(bellBoy1.languages[1]);
